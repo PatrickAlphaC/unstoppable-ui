@@ -1,34 +1,171 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Unstoppable Froge
 
-## Getting Started
+Pronounced "frōg" as in "yogurt".
 
-First, run the development server:
+## How can we make a website unstoppable as f*ck? 
+
+1. Store UI on all decentralized storage
+   1. IPFS
+   2. Filecoin
+   3. Arweave
+   4. Skynet
+   5. 0Chain
+   6. Ethereum
+2. Store code on all decentralized git 
+   1. Radicle
+   2. Sourc3
+3. ENS it
+4. Add Logic to Smart Contract Platform (ETH)
+   1. We don't have one, but this would be the easy part
+
+
+# Table Of Contents
+
+- [Unstoppable Froge](#unstoppable-froge)
+  - [How can we make a website unstoppable as f*ck?](#how-can-we-make-a-website-unstoppable-as-fck)
+- [Table Of Contents](#table-of-contents)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Quickstart](#quickstart)
+- [Unstoppableness](#unstoppableness)
+  - [Export The Code](#export-the-code)
+  - [IPFS](#ipfs)
+    - [Bonus](#bonus)
+    - [IPFS & Filecoin - FleekHQ](#ipfs--filecoin---fleekhq)
+  - [Filecoin](#filecoin)
+  - [Arweave - Raw](#arweave---raw)
+
+
+# Getting Started
+
+## Requirements
+
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- [Nodejs](https://nodejs.org/en/)
+  - You'll know you've installed nodejs right if you can run:
+    - `node --version`and get an ouput like: `vx.x.x`
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
+  - You'll know you've installed yarn right if you can run:
+    - `yarn --version` And get an output like: `x.x.x`
+    - You might need to install it with npm
+
+> If you're familiar with `npx` and `npm` instead of `yarn`, you can use `npx` for execution and `npm` for installing dependencies. 
+
+## Quickstart
+
+1. Clone this repo, install dependencies.
 
 ```bash
-npm run dev
-# or
+git clone https://PatrickAlphaC/unstoppable-ui
+cd unstoppable-ui
+yarn
+```
+
+2. Check out the UI!
+
+```
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Unstoppableness
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br/>
+<p align="center">
+Un<img src="./img/ron.webp" width="125" alt="Ron Stoppable">
+</p>
+<br/>
 
-## Learn More
+Get the joke? 
 
-To learn more about Next.js, take a look at the following resources:
+## Export The Code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+First, we need to create a static build of our app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+yarn next build
+yarn next export -o unstoppable-ui-static-export
+```
 
-## Deploy on Vercel
+This will generate all the code we need in a folder named `unstoppable-ui-static-export`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## IPFS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. [Install IPFS](https://ipfs.tech/#install)
+
+Install the [IPFS Desktop app](https://ipfs.tech/#install). You could install the IPFS command line too, but the desktop app is nice. 
+
+
+2. Open the app and click `import` -> `folder`
+
+<p align="center">
+<img src="./img/import-ipfs.png" width="500" alt="Import IPFS">
+</p>
+
+3. Choose `unstoppable-ui-static-export` and hit `upload`
+
+<p align="center">
+<img src="./img/upload-ipfs.png" width="500" alt="Upload IPFS">
+</p>
+
+You'll now have this folder on your IPFS node! 
+
+4. Pin it, share it with everyone and tell them to pin it. 
+
+You now have a CID with your pinned Website! Copy your CID from IPFS, and paste it into your browser with an `ipfs://` prefix. 
+
+If you have a IPFS enabled browser with something like [brave](https://brave.com/) or your browser has [IPFS Companion](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch), you can go to the following URL in your browser:
+
+```
+ipfs://QmUrF435TTvK6wQGUEJ5W6mLTokyD98do2LHmPwk29amed
+```
+
+Or
+
+```
+ipfs://bafybeidaxlgco3us3dbs2svojipcfvwl4e6dwne3wohlhmxd2ozjdexbxy/
+```
+
+### Bonus
+
+Ask centralized projects like [Pinata](https://www.pinata.cloud/) to host our data for some redundancy. 
+
+### IPFS & Filecoin - FleekHQ
+
+Now this is great! The next step on our journey is hosting to Filecoin. IPFS is great, but if we are the only node on the planet that is hosting the data, we could get shut down! So we need to have our data hosted on a decentralized blockchain that can't get shut down! So we want to store it on Filecoin.
+
+Now the Filecoin deployment process can get... tricky. An easier way for us to deploy to Filecoin (but not censorship resistant!) is [FleekHQ](https://fleekhq.eth.link/).
+
+Just follow their docs, deploy your code, and BOOM. You'll have a deal setup with IPFS & Filecoin! You'll need to integrate Github as well. I'm going going to go over it here since you should follow their docs.
+
+## Filecoin 
+
+Now... The raw saving to Filecoin... It's really hard right now. [You can follow these docs](https://lotus.filecoin.io/tutorials/lotus/store-and-retrieve/store-data/).
+
+They working on FVM to make this easier. 
+
+
+## Arweave - Raw
+
+```
+yarn arkb deploy ./unstoppable-ui-static-export --wallet /path/to/your/arweave.json
+```
+
+[arkb](https://docs.arweave.org/developers/tools/textury-arkb)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

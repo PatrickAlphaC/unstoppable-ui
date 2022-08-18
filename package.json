@@ -10,6 +10,7 @@
     "format": "yarn prettier --write ."
   },
   "dependencies": {
+    "arkb": "^1.1.60",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
