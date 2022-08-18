@@ -1,6 +1,30 @@
 # Unstoppable Froge
 
-Pronounced "frōg" as in "yogurt".
+Pronounced "frōg" as in "yogurt". This repo shows how to deploy a website to a ton of decentralized solutions so it will stay up. 
+
+# Unstoppable Deployments
+
+## Websites
+[IPFS](ipfs://QmPL3uV44A8Njzcoezd3q7Kj5r2pGckY53fABLNyLvKqqg)
+[Arweave](https://arweave.net/0M0QZAG90JfEXvuJy05NxYhUg_-uEAjiToWdrTACQvo)
+
+# Table Of Contents
+
+- [Unstoppable Froge](#unstoppable-froge)
+- [Unstoppable Deployments](#unstoppable-deployments)
+  - [Websites](#websites)
+- [Table Of Contents](#table-of-contents)
+  - [How can we make a website unstoppable as f*ck?](#how-can-we-make-a-website-unstoppable-as-fck)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Quickstart](#quickstart)
+- [Unstoppableness](#unstoppableness)
+  - [Export The Code](#export-the-code)
+  - [IPFS](#ipfs)
+    - [Bonus](#bonus)
+    - [IPFS & Filecoin - FleekHQ](#ipfs--filecoin---fleekhq)
+  - [Filecoin](#filecoin)
+  - [Arweave - Raw](#arweave---raw)
 
 ## How can we make a website unstoppable as f*ck? 
 
@@ -17,23 +41,6 @@ Pronounced "frōg" as in "yogurt".
 3. ENS it
 4. Add Logic to Smart Contract Platform (ETH)
    1. We don't have one, but this would be the easy part
-
-
-# Table Of Contents
-
-- [Unstoppable Froge](#unstoppable-froge)
-  - [How can we make a website unstoppable as f*ck?](#how-can-we-make-a-website-unstoppable-as-fck)
-- [Table Of Contents](#table-of-contents)
-- [Getting Started](#getting-started)
-  - [Requirements](#requirements)
-  - [Quickstart](#quickstart)
-- [Unstoppableness](#unstoppableness)
-  - [Export The Code](#export-the-code)
-  - [IPFS](#ipfs)
-    - [Bonus](#bonus)
-    - [IPFS & Filecoin - FleekHQ](#ipfs--filecoin---fleekhq)
-  - [Filecoin](#filecoin)
-  - [Arweave - Raw](#arweave---raw)
 
 
 # Getting Started
@@ -150,9 +157,37 @@ They working on FVM to make this easier.
 
 ## Arweave - Raw
 
+
+1. Export another output
+
 ```
-yarn arkb deploy ./unstoppable-ui-static-export --wallet /path/to/your/arweave.json
+yarn build
+yarn next export -o arweave-output
 ```
+
+2. Update to relative imports
+
+Arweave can only understand relative imports. So, go into `index.html` of the `arweave-output` file, and do a find & replace of `"/` with `"./`.
+
+Then, update:
+
+```
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+```
+with
+```
+src="./lily-pad.png"
+```
+
+3. Get an arweave wallet/key
+
+You can get some free [arweave for testing here.](https://faucet.arweave.net/) Then just save your json key to a file. 
+
+4. Deploy to arweave
+
+```
+yarn arkb deploy ./arweave-output --wallet /path/to/wallet.json
+``
 
 [arkb](https://docs.arweave.org/developers/tools/textury-arkb)
 

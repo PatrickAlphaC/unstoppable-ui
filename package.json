@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "yarn prettier --write ."
+    "format": "yarn prettier --write .",
+    "export-ipfs": "yarn next export -o unstoppable-ui-static-export",
+    "export-arweave": "yarn next export -o arweave-output"
   },
   "dependencies": {
     "arkb": "^1.1.60",
