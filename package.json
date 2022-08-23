@@ -8,16 +8,35 @@
     "start": "next start",
     "lint": "next lint",
     "format": "yarn prettier --write .",
+    "fleek-install": "yarn install --ignore-engines",
     "export-ipfs": "yarn next export -o unstoppable-ui-static-export",
-    "export-arweave": "yarn next export -o arweave-output"
+    "export-relative-links": "yarn next export -o relative-links-output"
   },
   "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.4",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.7.3",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
     "arkb": "^1.1.60",
+    "base64-sol": "^1.1.0",
+    "chai": "^4.3.6",
+    "hardhat": "^2.10.2",
+    "hardhat-deploy": "^0.11.12",
+    "hardhat-gas-reporter": "^1.0.8",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "solidity-coverage": "^0.7.21",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0"
   },
   "devDependencies": {
+    "@skynetlabs/skynet-nodejs": "^2.8.0",
     "@types/node": "18.7.6",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
