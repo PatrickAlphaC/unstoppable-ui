@@ -16,6 +16,7 @@ Pronounced "frōg" as in "yogurt". This repo shows how to deploy a website to a 
 *This will last until no one pins it*
 
 Filecoin: Deal Pending...
+<!-- yarn ipfs-car --pack unstoppable-ui-static-export/ --output static-output.car  -->
 *This will last till my X months deal is up*
 
 [Arweave (Gateway)](https://arweave.net/0M0QZAG90JfEXvuJy05NxYhUg_-uEAjiToWdrTACQvo)
