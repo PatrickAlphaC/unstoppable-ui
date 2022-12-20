@@ -311,7 +311,8 @@ You can get some free [arweave for testing here.](https://faucet.arweave.net/) T
 yarn arkb deploy ./relative-links-output --wallet /path/to/wallet.json
 ```
 
-[arkb](https://docs.arweave.org/developers/tools/textury-arkb)
+- [arkb](https://docs.arweave.org/developers/tools/textury-arkb)
+- [arweave size](https://viewblock.io/arweave/stat/cumulativeWeaveSize)
 
 ## Sia & Skynet
 
