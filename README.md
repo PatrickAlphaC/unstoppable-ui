@@ -24,8 +24,15 @@ Pronounced "frōg" as in "yogurt". This repo shows how to deploy a website to a 
 - Sia
 *This will only last 3 months if I don't renew the contract, also only I can see it.*
 
-- [Skynet (Web3 Portal Gateway)](https://web3portal.com/_AZKZDBq_o4N3440GYb6_ow5yAFsrLW2F2idlHE-UcMoog)
-*This will only last 3 months*
+<!-- CJMSR68MCOINQ3OCP51LMI3RLU6JG8KLS4GDS02VJ4C9GT4PGP2G -->
+
+- [Sia Skynet (Web3 Portal Gateway)](https://web3portal.com/_AZKZDBq_o4N3440GYb6_ow5yAFsrLW2F2idlHE-UcMoog)
+*This will only last 3 months, and you need to use a Skynet API Key in the header. Use the below command:*
+
+```
+curl --location --request GET 'https://web3portal.com/_AZKZDBq_o4N3440GYb6_ow5yAFsrLW2F2idlHE-UcMoog' \
+--header 'Skynet-Api-Key: CJMSR68MCOINQ3OCP51LMI3RLU6JG8KLS4GDS02VJ4C9GT4PGP2G'
+```
 
 - [Ethereum (NFT Address: 0xD8E1A2Bf94D72Cca7C6584B502FF05F618FCC509)](https://arbiscan.io/address/0xD8E1A2Bf94D72Cca7C6584B502FF05F618FCC509)
 *This will last forever*
